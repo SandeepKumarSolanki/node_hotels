@@ -7,7 +7,7 @@ const MenuItem = require('../models/MenuItem');
 //POST method to add a MenuItem
 router.post('/', async (req, res) => {
     try {
-        const data = req.body();
+        const data = req.body;
         const newMenu = new MenuItem(data);
         const response = await newMenu.save();
         console.log('Menu Item data saved');
